@@ -1,0 +1,45 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+import java.util.Scanner;
+
+public class calculator {
+   public calculator() {
+   }
+
+   public static void main(String[] var0) {
+      Scanner var8 = new Scanner(System.in);
+      System.out.print("Enter your first number: ");
+      double var1 = var8.nextDouble();
+      System.out.print("Enter an operator (+, -, *, /): ");
+      char var7 = var8.next().charAt(0);
+      System.out.print("Enter your second number: ");
+      double var3 = var8.nextDouble();
+      double var5;
+      switch (var7) {
+         case '*':
+            var5 = var1 * var3;
+            System.out.println("Result: " + var5);
+            break;
+         case '+':
+            var5 = var1 + var3;
+            System.out.println("Result: " + var5);
+            break;
+         case ',':
+         case '.':
+         default:
+            System.out.println("Error: Invalid operator.");
+            break;
+         case '-':
+            var5 = var1 - var3;
+            System.out.println("Result: " + var5);
+            break;
+         case '/':
+            if (var3 != 0.0) {
+               var5 = var1 / var3;
+               System.out.println("Result: " + var5);
+            } else {
+               System.out.println("Error: Division by zero is not allowed.");
+            }
+      }
+
+   }
+}
